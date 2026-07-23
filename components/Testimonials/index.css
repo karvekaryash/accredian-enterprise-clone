@@ -1,169 +1,172 @@
 .testimonials-section {
     padding: 100px 0;
     background: #ffffff;
-}
-
-.testimonial-card {
+  }
+  
+  .testimonial-card {
     background: #ffffff;
     border-radius: 20px;
     padding: 35px;
     position: relative;
     border: 1px solid transparent;
-    box-shadow: 0 10px 25px rgba(0,0,0,.08);
-    transition: all .35s ease;
-
-    /* NEW */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+  
     display: flex;
     flex-direction: column;
-    height: 100%;
-    min-height: 360px;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 45px rgba(0,0,0,.12);
-}
-
-.quote-icon {
+    min-height: 420px;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  }
+  
+  .quote-icon {
     position: absolute;
     top: 25px;
     right: 25px;
     width: 45px;
     height: 45px;
+    border-radius: 50%;
     background: #eef5ff;
     color: #0b66ff;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 18px;
-}
-
-.stars {
+  }
+  
+  .stars {
     display: flex;
     gap: 5px;
     color: #f59e0b;
     font-size: 18px;
     margin-bottom: 20px;
-}
-
-.review {
+  }
+  
+  .review {
     color: #6b7280;
     line-height: 1.8;
     font-size: 16px;
-
-    /* NEW */
     flex: 1;
-    margin-bottom: 35px;
-}
-
-.user {
+    margin-bottom: 30px;
+  }
+  
+  .user {
     display: flex;
     align-items: center;
     gap: 15px;
     margin-top: auto;
-}
-
-.user img {
+  }
+  
+  .user img {
     width: 65px;
     height: 65px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #eef5ff;
-    transition: .35s;
-}
-
-.testimonial-card:hover .user img {
-    border-color: #0b66ff;
-}
-
-.user-info h4 {
-    color: #1f2937;
+  }
+  
+  .user-info h4 {
+    margin: 0;
     font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.user-info span {
+    color: #1f2937;
+  }
+  
+  .user-info span {
     color: #6b7280;
     font-size: 14px;
-}
-
-/* ---------- React Slick ---------- */
-
-.slick-slider {
+  }
+  
+  /* ---------- React Slick ---------- */
+  
+  .slick-slider {
     width: 100%;
-}
-
-.slick-track {
-    display: flex !important;
-}
-
-.slick-slide {
-    height: inherit !important;
+  }
+  
+  .slick-slide {
     padding: 15px;
-}
-
-.slick-slide > div {
+    box-sizing: border-box;
+  }
+  
+  .slick-slide > div {
     height: 100%;
-}
-
-.slick-list {
+  }
+  
+  .slick-list {
     margin: 0 -15px;
-}
-
-.slick-dots li button:before {
+  }
+  
+  .slick-dots li button:before {
     color: #0b66ff;
     font-size: 12px;
-}
-
-.slick-prev:before,
-.slick-next:before {
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
     color: #0b66ff;
     font-size: 28px;
-}
-
-.slick-prev {
+  }
+  
+  .slick-prev {
     left: -35px;
-}
-
-.slick-next {
+  }
+  
+  .slick-next {
     right: -35px;
-}
-
-/* ---------- Responsive ---------- */
-
-@media (max-width:992px){
-
-.testimonial-card{
-    min-height:340px;
-}
-
-}
-
-@media (max-width:768px){
-
-.testimonial-card{
-    min-height:auto;
-    padding:30px;
-}
-
-.quote-icon{
-    width:40px;
-    height:40px;
-    font-size:16px;
-}
-
-.user img{
-    width:55px;
-    height:55px;
-}
-
-.user-info h4{
-    font-size:16px;
-}
-
-.review{
-    font-size:15px;
-}
-
-}
+  }
+  
+  /* ---------- Tablet ---------- */
+  
+  @media (max-width: 992px) {
+    .testimonial-card {
+      min-height: 390px;
+    }
+  }
+  
+  /* ---------- Mobile ---------- */
+  
+  @media (max-width: 768px) {
+    .testimonials-section {
+      padding: 70px 0;
+    }
+  
+    .testimonial-card {
+      min-height: auto;
+      padding: 25px;
+    }
+  
+    .quote-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+    }
+  
+    .stars {
+      font-size: 16px;
+    }
+  
+    .review {
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+  
+    .user img {
+      width: 55px;
+      height: 55px;
+    }
+  
+    .user-info h4 {
+      font-size: 16px;
+    }
+  
+    .user-info span {
+      font-size: 13px;
+    }
+  
+    .slick-prev,
+    .slick-next {
+      display: none !important;
+    }
+  }

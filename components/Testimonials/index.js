@@ -59,22 +59,31 @@ export default function Testimonials() {
     autoplay: true,
     autoplaySpeed: 3000,
     speed: 700,
+  
     slidesToShow: 3,
     slidesToScroll: 1,
+  
+    arrows: true,
+    adaptiveHeight: false,
+  
     responsive: [
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 2
-        }
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+        },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+    ],
   };
 
   if (loading) {

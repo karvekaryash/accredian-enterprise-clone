@@ -85,7 +85,7 @@ export default function Programs() {
           {programs.map((program) => {
 
 const Icon = FaLaptopCode;
-            console.log(program.icon);
+            
 
             return (
               <div
