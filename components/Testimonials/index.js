@@ -32,6 +32,9 @@ export default function Testimonials() {
         
 
         setTestimonials(data);
+        setTimeout(() => {
+          window.dispatchEvent(new Event("resize"));
+        }, 500);
 
       } catch (error) {
 
@@ -59,28 +62,29 @@ export default function Testimonials() {
     autoplay: true,
     autoplaySpeed: 3000,
     speed: 700,
-  
+    arrows: false,
+    adaptiveHeight: false,
+    mobileFirst: true,
     slidesToShow: 3,
     slidesToScroll: 1,
   
-    arrows: true,
-    adaptiveHeight: false,
-  
     responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          arrows: false,
-        },
-      },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
         },
       },
     ],
@@ -125,7 +129,8 @@ export default function Testimonials() {
 
         {testimonials.length > 0 && (
 
-          <Slider {...settings}>
+          <Slider key={loading ? "loading" : testimonials.length}
+          {...settings}>
 
             {testimonials.map((item) => (
 
